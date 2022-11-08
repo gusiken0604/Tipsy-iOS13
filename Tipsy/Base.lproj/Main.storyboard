@@ -111,6 +111,9 @@
                                                             <constraint firstAttribute="width" constant="94" id="sc0-qS-1tJ"/>
                                                         </constraints>
                                                         <color key="tintColor" red="0.0" green="0.59227246050000004" blue="0.347086966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="stepperValueCanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hee-zx-l8j"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                             </stackView>
@@ -178,6 +181,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Kc-R9-Mty"/>
+                                    <segue destination="Dnf-m2-FPm" kind="presentation" identifier="goToResults" modalPresentationStyle="fullScreen" id="dHs-1e-nKR"/>
                                 </connections>
                             </button>
                         </subviews>
