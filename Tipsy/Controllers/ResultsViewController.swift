@@ -23,14 +23,9 @@ class ResultsViewController: UIViewController {
         
         totalLabel.text = result
         settingLabel.text = "Split between\(split)people,with\(tip)% tip."
-        
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton){
-        
-        self.dismiss(animated: true, completion: nil)
-        
+         self.dismiss(animated: true, completion: nil)
     }
-
-
 }

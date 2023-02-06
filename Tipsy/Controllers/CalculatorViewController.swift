@@ -35,22 +35,19 @@ class CalculatorViewController: UIViewController {
         let buttonTitleMinusPercentSigh = String(buttonTitle.dropLast())
         let buttonTitleAsANumber = Double(buttonTitleMinusPercentSigh)!
         tip = buttonTitleAsANumber / 100
-        
     }
-    
     
     @IBAction func stepperValueCanged(_ sender: UIStepper) {
         splitNumberLabel.text = String(format: "%.0f", sender.value)
         numberOfPeople = Int(sender.value)
     }
     
-    
     @IBAction func calculatePressed(_ sender: UIButton) {
         let bill = billTextField.text!
         if bill != "" {
             billTotal = Double(bill)!
             let result = billTotal * (1 + tip) / Double(numberOfPeople)
-             finalResult = String(format: "%.2f", result)
+            finalResult = String(format: "%.2f", result)
         }
         self.performSegue(withIdentifier: "goToResults", sender: self)
     }
@@ -64,9 +61,5 @@ class CalculatorViewController: UIViewController {
             destinationVC.split = numberOfPeople
         }
     }
-    
-    
-    
-    
 }
 
