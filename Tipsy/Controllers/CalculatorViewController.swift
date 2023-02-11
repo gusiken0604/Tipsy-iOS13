@@ -19,7 +19,6 @@ class CalculatorViewController: UIViewController {
     
     var tip = 0.10
     var numberOfPeople = 2
-    var billTotal = 0.0
     var finalResult = "0.0"
     
     @IBAction func tipCanged(_ sender: UIButton) {
@@ -43,8 +42,9 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        guard let bill = billTextField.text, !bill.isEmpty else {return}
-        billTotal = Double(bill)!
+        
+        guard let bill = billTextField.text, !bill.isEmpty, let billTotal = Double(bill) else {return}
+
         let result = billTotal * (1 + tip) / Double(numberOfPeople)
         finalResult = String(format: "%.2f", result)
         
